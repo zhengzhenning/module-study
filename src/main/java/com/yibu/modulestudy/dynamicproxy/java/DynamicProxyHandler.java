@@ -71,9 +71,11 @@ public class DynamicProxyHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         log.info("proxy:{},method:{},args:{}", proxy.getClass(), method.getName(), args);
-        System.err.println("在被代理对象的实际方法被调用前，做一些事....");
+
+        log.info("{} invoke  before...", method.getName());
         Object invoke = method.invoke(proxied, args);
-        System.err.println("在被代理对象的实际方法被调用后，做一些事....\n");
+        log.info("{} invoke after...", method.getName());
+
         return invoke;
     }
 }
