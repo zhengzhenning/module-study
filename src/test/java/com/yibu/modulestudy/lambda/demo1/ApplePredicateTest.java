@@ -1,5 +1,7 @@
 package com.yibu.modulestudy.lambda.demo1;
 
+import cn.hutool.core.lang.func.Supplier2;
+import cn.hutool.core.lang.func.VoidFunc0;
 import com.google.common.collect.Lists;
 import com.yibu.modulestudy.ModuleStudyApplication;
 import com.yibu.modulestudy.lambda.demo2.Car;
@@ -15,6 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.net.CacheRequest;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @SpringBootTest(classes = {ModuleStudyApplication.class})
@@ -22,6 +25,40 @@ import java.util.List;
 public class ApplePredicateTest {
 
     private final static Logger log = LoggerFactory.getLogger(ApplePredicateTest.class);
+
+    @Test
+    public void test07() {
+        Runnable runnable = () -> log.error("多此一举");
+        runnable.run();
+    }
+
+    /**
+     * 两种方式实现对象比较
+     */
+    @Test
+    public void test06() {
+        Apple apple = Apple.builder().name("苹果").color("绿色").weight(30).build();
+        Apple apple1 = Apple.builder().name("苹果").color("红色").weight(40).build();
+
+        // TODO !Lambda 7行代码
+        Comparator<Apple> comparator = new Comparator<Apple>() {
+            @Override
+            public int compare(Apple o1, Apple o2) {
+                return o1.getWeight().compareTo(o2.getWeight());
+            }
+        };
+        Assertions.assertThat(comparator.compare(apple, apple1)).isEqualTo(-1);
+
+        // TODO Lambda表达式 2行代码
+        Comparator<Apple> lambdaLogic = (Apple a, Apple b) -> a.getWeight().compareTo(b.getWeight());
+        Assertions.assertThat(lambdaLogic.compare(apple, apple1)).isEqualTo(1);
+    }
+
+    @Test
+    public void test05() {
+        List<Apple> filterColor = this.filterT(mockApples(), (Apple apple) -> apple.getColor().equals("绿色"));
+        Assertions.assertThat(filterColor).hasSize(1);
+    }
 
     @Test
     public void test04() {
