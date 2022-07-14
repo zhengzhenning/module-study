@@ -1,4 +1,4 @@
-package com.yibu.modulestudy.dynamicproxy.java;
+package com.yibu.modulestudy.proxy.dynamicproxy;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -13,11 +13,11 @@ import lombok.extern.log4j.Log4j2;
 public class InterfaceImpl implements Interface {
     @Override
     public void doSomething() {
-        log.error("doSomething....");
+        log.info("doSomething....");
     }
 
     @Override
     public void somethingElse(String arg) {
-        log.error("somethingElse:%s", arg);
+        log.info("somethingElse:{}", arg);
     }
 }

@@ -1,4 +1,4 @@
-package com.yibu.modulestudy.dynamicproxy.java;
+package com.yibu.modulestudy.proxy.dynamicproxy;
 
 /**
  * @program: module-study

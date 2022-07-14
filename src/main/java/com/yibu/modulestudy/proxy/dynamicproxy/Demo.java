@@ -1,4 +1,6 @@
-package com.yibu.modulestudy.dynamicproxy.java;
+package com.yibu.modulestudy.proxy.dynamicproxy;
+
+import lombok.extern.log4j.Log4j2;
 
 import java.lang.reflect.Proxy;
 
@@ -9,7 +11,8 @@ import java.lang.reflect.Proxy;
  * @author: 振振
  * @date: 2022-07-14 10:44
  **/
-public class SimpleDynamicProxyDemo {
+@Log4j2
+public class Demo {
 
     public static void main(String[] args) {
         /**
@@ -21,6 +24,8 @@ public class SimpleDynamicProxyDemo {
         Interface proxyInstance = (Interface) Proxy.newProxyInstance(Interface.class.getClassLoader()
                 , new Class[]{Interface.class}, new DynamicProxyHandler(new InterfaceImpl()));
         proxyInstance.doSomething();
+
+        System.err.println("==============================");
         proxyInstance.somethingElse("做一些额外的事....");
     }
 }

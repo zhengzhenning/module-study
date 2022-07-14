@@ -1,7 +1,6 @@
-package com.yibu.modulestudy.dynamicproxy.java;
+package com.yibu.modulestudy.proxy.dynamicproxy;
 
 import lombok.extern.log4j.Log4j2;
-import org.apache.commons.lang3.ArrayUtils;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -70,12 +69,13 @@ public class DynamicProxyHandler implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        log.info("proxy:{},method:{},args:{}", proxy.getClass(), method.getName(), args);
-
-        log.info("{} invoke  before...", method.getName());
+        log.error("1.代理对象 proxy:{}", proxy.getClass());
+        log.error("2.被代理对象的方法 method:{}", method.getName());
+        log.error("3.被代理对象的方法的入参 args:{}", args);
+        log.error("4.执行被代理方法{}之前(调用实际方法之前，可以做一些事)...", method.getName());
         Object invoke = method.invoke(proxied, args);
-        log.info("{} invoke after...", method.getName());
-
+        log.error("5.执行被代理方法{}之后(调用实际方法之后，可以做一些事)...", method.getName());
+        log.error("\n");
         return invoke;
     }
 }

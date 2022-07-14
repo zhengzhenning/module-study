@@ -35,6 +35,11 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'junit:junit'
+
+    // + Guava
+    implementation("com.google.guava:guava:31.1-jre")
+    // + hutool
+    implementation 'cn.hutool:hutool-all:5.8.4'
 }
 
 test {
