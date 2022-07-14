@@ -9,11 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = ModuleStudyApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,7 +25,7 @@ class BufferedReaderProcessorTest {
         System.err.println(oneLine);
 
         String twoLine = this.processFile((BufferedReader br) -> br.readLine() + br.readLine());
-        log.
+
     }
 
     private String processFile(BufferedReaderProcessor bufferedReaderProcessor) throws IOException {
