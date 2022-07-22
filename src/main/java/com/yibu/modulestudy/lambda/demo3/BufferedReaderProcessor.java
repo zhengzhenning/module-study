@@ -13,5 +13,12 @@ import java.io.IOException;
 @FunctionalInterface
 public interface BufferedReaderProcessor {
 
+    /**
+     * 处理BufferedReader流
+     *
+     * @param bufferedReader bR流对象
+     * @return
+     * @throws IOException
+     */
     String process(BufferedReader bufferedReader) throws IOException;
 }

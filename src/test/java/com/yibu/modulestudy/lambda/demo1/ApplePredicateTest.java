@@ -1,7 +1,5 @@
 package com.yibu.modulestudy.lambda.demo1;
 
-import cn.hutool.core.lang.func.Supplier2;
-import cn.hutool.core.lang.func.VoidFunc0;
 import com.google.common.collect.Lists;
 import com.yibu.modulestudy.ModuleStudyApplication;
 import com.yibu.modulestudy.lambda.demo2.Car;
@@ -15,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.net.CacheRequest;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;

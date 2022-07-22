@@ -1,0 +1,12 @@
+# 应用名称
+spring:
+  application:
+    name: module-study
+  data:
+    mongodb:
+      uri: mongodb://root:123456@10.50.125.142:27017,10.50.125.142:27018/governance-center?authSource=admin
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+

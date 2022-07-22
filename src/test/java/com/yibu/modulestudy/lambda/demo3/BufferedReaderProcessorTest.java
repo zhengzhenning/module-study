@@ -14,23 +14,42 @@ import java.io.IOException;
 
 @SpringBootTest(classes = ModuleStudyApplication.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-class BufferedReaderProcessorTest {
+public class BufferedReaderProcessorTest {
 
     private static final Logger log = LoggerFactory.getLogger(BufferedReaderProcessor.class);
 
+    /**
+     * 环绕执行模式
+     * @throws IOException
+     */
     @Test
     public void test01() throws IOException {
 
-        String oneLine = this.processFile((BufferedReader br) -> br.readLine());
-        System.err.println(oneLine);
+        String oneLine = this.processFile(BufferedReader::readLine);
+        System.err.println("读1行:" + oneLine);
 
-        String twoLine = this.processFile((BufferedReader br) -> br.readLine() + br.readLine());
+
+        String forthLine = this.processFile((BufferedReader br) -> br.readLine() + br.readLine() + br.readLine() + br.readLine());
+        System.err.println("读4行:" + forthLine);
+
+        System.err.println("读取所有：");
+        this.processFile((BufferedReader br) -> {
+            do {
+                System.err.println(">>>>>> " + br.readLine());
+            } while (br.read() != -1);
+            return "读取完毕！";
+        });
 
     }
 
+    /**
+     * @param bufferedReaderProcessor
+     * @return
+     * @throws IOException
+     */
     private String processFile(BufferedReaderProcessor bufferedReaderProcessor) throws IOException {
         // TODO try(){}自带资源关闭操作
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("BufferedReaderProcessorTest.java"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("src/test/java/com/yibu/modulestudy/lambda/demo3/BufferedReaderProcessorTest.java"))) {
             return bufferedReaderProcessor.process(bufferedReader);
         }
     }
