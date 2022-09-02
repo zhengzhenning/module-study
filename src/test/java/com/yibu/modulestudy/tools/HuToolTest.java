@@ -1,6 +1,10 @@
 package com.yibu.modulestudy.tools;
 
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.date.DateUnit;
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.IdcardUtil;
+import cn.hutool.core.util.ReUtil;
 import com.yibu.modulestudy.ModuleStudyApplication;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
@@ -10,7 +14,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
+import java.util.Date;
 
 @SpringBootTest(classes = {ModuleStudyApplication.class})
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -24,12 +28,33 @@ public class HuToolTest {
     public void tearDown() throws Exception {
     }
 
+
+    @Test
+    public void regexMatchEn(){
+        String text="SHAUI,SAOI,ASJIOAS,SAJIO_SAI,SAJIO";
+        String text1="永,远,跟,党,走";
+        boolean matchEn = ReUtil.isMatch(".*[A-Za-z]+.*", text);
+        Assertions.assertThat(matchEn).isTrue();
+        boolean matchCn = ReUtil.isMatch(".*[A-Za-z]+.*", text1);
+        Assertions.assertThat(matchCn).isFalse();
+
+    }
+
+    @Test
+    public void testGetIdcardBirth(){
+        DateTime birthDate = IdcardUtil.getBirthDate("511631195806034512");
+        long l = DateUtil.between(birthDate, new Date(), DateUnit.DAY) / 366;
+        System.err.println(l);
+        int ageByIdCard = IdcardUtil.getAgeByIdCard("511631195806034512");
+        System.err.println(ageByIdCard);
+    }
+
     /**
      * TODO 可以结合 http://www.ip33.com/shenfenzheng.html 进行双向比对
      */
     @Test
     public  void 测试身份证校验_01(){
-        String idCardNum="14052219841209008X";
+        String idCardNum="511631195806034512";
         boolean validCard = IdcardUtil.isValidCard(idCardNum);
         Assertions.assertThat(validCard).isTrue();
     }

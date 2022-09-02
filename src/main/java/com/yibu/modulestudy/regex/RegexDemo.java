@@ -1,4 +1,6 @@
-package com.yibu.modulestudy.regex;/**
+package com.yibu.modulestudy.regex;
+
+/**
  * @program: module-study
  * @description: 正则
  * @packagename: com.yibu.modulestudy.regex
