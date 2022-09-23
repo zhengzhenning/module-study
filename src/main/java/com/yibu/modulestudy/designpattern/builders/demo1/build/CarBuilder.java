@@ -1,16 +1,16 @@
-package com.yibu.modulestudy.designpattern.builders.build;
+package com.yibu.modulestudy.designpattern.builders.demo1.build;
 
-import com.yibu.modulestudy.designpattern.builders.cars.Car;
-import com.yibu.modulestudy.designpattern.builders.cars.CarType;
-import com.yibu.modulestudy.designpattern.builders.components.Engine;
-import com.yibu.modulestudy.designpattern.builders.components.GPSNavigator;
-import com.yibu.modulestudy.designpattern.builders.components.Transmission;
-import com.yibu.modulestudy.designpattern.builders.components.TripComputer;
+import com.yibu.modulestudy.designpattern.builders.demo1.cars.Car;
+import com.yibu.modulestudy.designpattern.builders.demo1.cars.CarType;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.Engine;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.GPSNavigator;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.Transmission;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.TripComputer;
 
 /**
  * @program: module-study
  * @description:
- * @packagename: com.yibu.modulestudy.designpattern.builders.build
+ * @packagename: com.yibu.modulestudy.designpattern.builders.demo1.build
  * @author: 振振
  * @date: 2022-09-22 21:41
  **/

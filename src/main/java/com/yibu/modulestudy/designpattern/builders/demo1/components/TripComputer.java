@@ -1,11 +1,11 @@
-package com.yibu.modulestudy.designpattern.builders.components;
+package com.yibu.modulestudy.designpattern.builders.demo1.components;
 
-import com.yibu.modulestudy.designpattern.builders.cars.Car;
+import com.yibu.modulestudy.designpattern.builders.demo1.cars.Car;
 
 /**
  * @program: module-study
  * @description:
- * @packagename: com.yibu.modulestudy.designpattern.builders.components
+ * @packagename: com.yibu.modulestudy.designpattern.builders.demo1.components
  * @author: 振振
  * @date: 2022-09-22 21:40
  **/

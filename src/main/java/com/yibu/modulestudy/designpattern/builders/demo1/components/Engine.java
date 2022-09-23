@@ -1,9 +1,9 @@
-package com.yibu.modulestudy.designpattern.builders.components;
+package com.yibu.modulestudy.designpattern.builders.demo1.components;
 
 /**
  * @program: module-study
  * @description: 引擎
- * @packagename: com.yibu.modulestudy.designpattern.builders.components
+ * @packagename: com.yibu.modulestudy.designpattern.builders.demo1.components
  * @author: 振振
  * @date: 2022-09-22 21:39
  **/

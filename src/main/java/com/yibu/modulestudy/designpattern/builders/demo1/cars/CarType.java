@@ -1,9 +1,9 @@
-package com.yibu.modulestudy.designpattern.builders.cars;
+package com.yibu.modulestudy.designpattern.builders.demo1.cars;
 
 /**
  * @program: module-study
  * @description: 汽车类型
- * @packagename: com.yibu.modulestudy.designpattern.builders.cars
+ * @packagename: com.yibu.modulestudy.designpattern.builders.demo1.cars
  * @author: 振振
  * @date: 2022-09-22 21:38
  **/

@@ -1,10 +1,10 @@
 package com.yibu.modulestudy.designpattern.builders;
 
-import com.yibu.modulestudy.designpattern.builders.build.CarBuilder;
-import com.yibu.modulestudy.designpattern.builders.build.CarManualBuilder;
-import com.yibu.modulestudy.designpattern.builders.cars.Car;
-import com.yibu.modulestudy.designpattern.builders.cars.Manual;
-import com.yibu.modulestudy.designpattern.builders.director.Director;
+import com.yibu.modulestudy.designpattern.builders.demo1.build.CarBuilder;
+import com.yibu.modulestudy.designpattern.builders.demo1.build.CarManualBuilder;
+import com.yibu.modulestudy.designpattern.builders.demo1.cars.Car;
+import com.yibu.modulestudy.designpattern.builders.demo1.cars.Manual;
+import com.yibu.modulestudy.designpattern.builders.demo1.director.Director;
 
 /**
  * @program: module-study
@@ -49,6 +49,7 @@ public class Demo {
         director.constructSUV(suvCarManualBuilder);
         Manual suvCarManual = suvCarManualBuilder.getResult();
         System.out.println("\n汽车《使用手册》已生成:\n" + suvCarManual.print());
+
 
     }
 }

@@ -1,9 +1,9 @@
-package com.yibu.modulestudy.designpattern.builders.cars;
+package com.yibu.modulestudy.designpattern.builders.demo1.cars;
 
-import com.yibu.modulestudy.designpattern.builders.components.Engine;
-import com.yibu.modulestudy.designpattern.builders.components.GPSNavigator;
-import com.yibu.modulestudy.designpattern.builders.components.Transmission;
-import com.yibu.modulestudy.designpattern.builders.components.TripComputer;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.Engine;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.GPSNavigator;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.Transmission;
+import com.yibu.modulestudy.designpattern.builders.demo1.components.TripComputer;
 
 /**
  * @program: module-study
