@@ -27,4 +27,8 @@ public class Shape<T> {
         return null;
     }
 
+    public String info(Shape shape) {
+        return shape.toString();
+    }
+
 }
