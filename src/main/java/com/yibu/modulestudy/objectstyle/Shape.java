@@ -28,7 +28,11 @@ public class Shape<T> {
     }
 
     public String info(Shape shape) {
-        return shape.toString();
+        return shape.draw();
+    }
+
+    public String draw() {
+        return "N/A";
     }
 
 }

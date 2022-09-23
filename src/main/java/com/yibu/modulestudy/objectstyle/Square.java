@@ -25,4 +25,9 @@ public class Square extends Shape<Long> {
     public Long perimeter() {
         return 4 * length;
     }
+
+    @Override
+    public String draw() {
+        return "画🟥🟥🟥🟥🟥🟥";
+    }
 }

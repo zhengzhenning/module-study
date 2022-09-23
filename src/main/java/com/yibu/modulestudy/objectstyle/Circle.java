@@ -32,4 +32,9 @@ public class Circle extends Shape<Double> {
     public Double perimeter() {
         return 2 * PAI * radius;
     }
+
+    @Override
+    public String draw() {
+        return "画⭕️⭕️⭕️⭕️⭕️⭕️⭕️";
+    }
 }

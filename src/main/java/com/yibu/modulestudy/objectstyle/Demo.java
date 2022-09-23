@@ -30,7 +30,7 @@ public class Demo {
         System.err.println("多态");
 
         Shape<Object> shape = new Shape<>();
-        System.err.println("[多态特性]圆的信息：" + shape.info(circle));
-        System.err.println("[多态特性]多态获取正方形的信息：" + shape.info(square));
+        System.err.println("[多态特性]" + shape.info(circle));
+        System.err.println("[多态特性]" + shape.info(square));
     }
 }
