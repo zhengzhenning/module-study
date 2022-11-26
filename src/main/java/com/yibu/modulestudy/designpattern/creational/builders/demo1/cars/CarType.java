@@ -1,4 +1,4 @@
-package com.yibu.modulestudy.designpattern.builders.demo1.cars;
+package com.yibu.modulestudy.designpattern.creational.builders.demo1.cars;
 
 /**
  * @program: module-study

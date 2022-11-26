@@ -1,10 +1,10 @@
-package com.yibu.modulestudy.designpattern.builders;
+package com.yibu.modulestudy.designpattern.creational.builders;
 
 import com.yibu.modulestudy.designpattern.builders.demo1.build.CarBuilder;
 import com.yibu.modulestudy.designpattern.builders.demo1.build.CarManualBuilder;
-import com.yibu.modulestudy.designpattern.builders.demo1.cars.Car;
-import com.yibu.modulestudy.designpattern.builders.demo1.cars.Manual;
-import com.yibu.modulestudy.designpattern.builders.demo1.director.Director;
+import com.yibu.modulestudy.designpattern.creational.builders.demo1.cars.Car;
+import com.yibu.modulestudy.designpattern.creational.builders.demo1.cars.Manual;
+import com.yibu.modulestudy.designpattern.creational.builders.demo1.director.Director;
 
 /**
  * @program: module-study
